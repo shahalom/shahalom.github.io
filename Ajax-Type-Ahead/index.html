@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ajax Type Ahead with Tailwind CSS</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  </head>
+  <body class="bg-cyan-500">
+    
+    <div class="type-ahead-wrap p-4 w-full md:max-w-xl mt-8 mx-auto">
+        <form class="search-form flex">
+            <input
+                type="search"
+                class="search-field h-10 w-full px-4 focus:outline-none"
+                placeholder="City or State"
+                spellcheck="false"
+                name="search-field"
+            />
+            <button class="flex items-center bg-white text-blue-900" aria-controls="Search Button" aria-expanded="false">
+                <span class="hidden">Search Button</span>
+                <svg class="w-10" width="24px" height="24px" viewBox="0 0 24 24" fill="none">
+                    <path d="m19 19-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></circle>
+                </svg>
+            </button>
+        </form>
+
+        <div class="mt-4">
+            <ul class="suggestions w-full max-h-96 overflow-auto"></ul>
+        </div>
+    </div>
+
+    <!-- script js -->
+    <script src="js/custom.js"></script>
+  </body>
+</html>
